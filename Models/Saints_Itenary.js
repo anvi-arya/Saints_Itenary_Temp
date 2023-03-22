@@ -45,11 +45,21 @@ const saintsItenarySchema = new mongoose.Schema({
   Cab: {},
 });
 
-const SaintsItenary = model(
-  "SaintsItenary",
-  saintsItenarySchema,
-  "Saints_Itenary"
+// this SaintsItenary is a model class which can be used to find documents in this collection
+// It can be used as a constructor to create documents for this collection based on  the above defined schema
+// It acts as a class with find as a static method for finding docs
+const SaintsItenary = mongoose.model(
+  "SaintsItenary", // it is reference to collection
+  saintsItenarySchema, // It's schema for documents  in this collections.
+  "Saints_Itenary" // name of collection to insert/read/update/delete
 );
+
 module.exports = {
   SaintsItenary,
 };
+// SaintsItenary.
+// const doc1 = new SaintsItenary({
+// monoose.model is a function that is used  to create Models
+// /models are  used to perform CRUD operations on a Collection
+// })
+//

@@ -44,6 +44,7 @@ const typeDefs = gql`
   }
 
   type SaintsItenary {
+    _id: ID
     createdAt: String
     updatedAt: String
     deleted: Boolean

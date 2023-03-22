@@ -6,7 +6,10 @@ const saintsItenarySchema = new mongoose.Schema({
     default: new Date(),
   },
   updatedAt: Date,
-  deleted: Boolean,
+  deleted: {
+    type: Boolean,
+    default: false,
+  },
   Experience_id: mongoose.Types.ObjectId,
   UserId: {
     type: mongoose.Types.ObjectId,

@@ -3,8 +3,9 @@ const { SaintsItenary } = require("../Models/Saints_Itenary");
 const resolvers = {
   Query: {
     getAll: async () => {
+      console.log("querying being passed");
       const allSaints = await SaintsItenary.find({});
-      console.log(allSaints);
+      console.log({ allSaints });
       return allSaints;
     },
   },

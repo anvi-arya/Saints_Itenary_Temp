@@ -57,6 +57,7 @@ const typeDefs = gql`
     Reviews: [Review]
   }
   input SaintsItenaryInput {
+    _id: ID
     createdAt: String
     updatedAt: String
     deleted: Boolean
